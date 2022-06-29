@@ -111,7 +111,7 @@ app.post("/adddemande", function (req2, res2) {
   let cost = req2.query.cost;
   // }
   let sql =
-    "INSERT INTO `demande` (`id`, `title`, `corps`, `NSS`, `Age`, `userid`, `username`, `userfamily_name`, `useradresse`, `struct`, `structadresse`, `operator`, `operatoradr`, `kilometrage`, `cost`) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    "INSERT INTO `demande` ( `title`, `corps`, `NSS`, `Age`, `userid`, `username`, `userfamily_name`, `useradresse`, `struct`, `structadresse`, `operator`, `operatoradr`, `kilometrage`, `cost`) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
   connection.query(
     sql,
     [
@@ -149,7 +149,7 @@ app.post("/addrecla", function (req2, res2) {
   let corps = req2.query.corps;
   let NSS = req2.query.NSS;
 
-  let sql = "INSERT INTO  recla(id,title,mail,corps,NSS) VALUES(?,?,?,?,?)";
+  let sql = "INSERT INTO  recla(title,mail,corps,NSS) VALUES(?,?,?,?,?)";
   connection.query(sql, [id, title, mail, corps, NSS], (err, results) => {
     if (!err) {
       res2.send(`Reclamation sent.`);
