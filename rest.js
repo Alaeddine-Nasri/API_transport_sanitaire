@@ -150,7 +150,7 @@ app.post("/addrecla", function (req2, res2) {
   let NSS = req2.query.NSS;
 
   let sql = "INSERT INTO  recla(title,mail,corps) VALUES(?,?,?)";
-  connection.query(sql, [id, title, mail, corps, NSS], (err, results) => {
+  connection.query(sql, [title, mail, corps], (err, results) => {
     if (!err) {
       res2.send(`Reclamation sent.`);
     } else {
