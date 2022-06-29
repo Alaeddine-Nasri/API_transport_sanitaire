@@ -94,7 +94,7 @@ app.post("/adddemande", function (req2, res2) {
   // res2.writeHead(200, { "Content-type": "test/html" });
 
   ///adddemande?id=1&title=demande1&corps=corps de la 1ere demande&NSS=322321&Age=11&userid=1&username=Ala Eddine&userfamily_name=Nasri&useradresse=&struct=Mustafa Basha&structadresse=&operator=&operatoradr=&kilometrage=&cost=0
-  let id = req2.query.id;
+  // let id = req2.query.id;
   let title = req2.query.title;
   let corps = req2.query.corps;
   let NSS = req2.query.NSS;
@@ -115,7 +115,7 @@ app.post("/adddemande", function (req2, res2) {
   connection.query(
     sql,
     [
-      id,
+      // id,
       title,
       corps,
       NSS,
